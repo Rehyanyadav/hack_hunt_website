@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="HACK & HUNT - KIIT FEST 8.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
+  <meta name="description" content="HACK & HUNT - KIIT FEST 8.0">
 
-  <!-- iOS meta tags & icons -->
+  <!-- iOS Meta Tags & Icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="hack_hunt">
@@ -25,22 +23,29 @@
   <link rel="preload" href="flutter.js" as="script">
   <link rel="preload" href="main.dart.js" as="script">
 
-  <!-- Firebase App (the core Firebase SDK) -->
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <!-- Firebase Auth -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-  <!-- Firebase Firestore -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-  <!-- Firebase Storage -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
-
   <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '"2332313894"';
+    window.addEventListener('load', function(ev) {
+      Flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        renderer: 'canvaskit' // Force CanvasKit
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      });
+    });
+  </script>
+  <script>
+  
 
-    // Initialize Firebase
-
-    // Initialize Firebase before Flutter web
+    // Initialize Firebase before Flutter
     window.addEventListener('load', function() {
       if (firebase) {
         firebase.initializeApp(firebaseConfig);
@@ -50,61 +55,16 @@
 
   <script src="flutter.js" defer></script>
 
-  <style>
-    body {
-      background-color: #000000;
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
-    }
-
-    #loading {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #000000;
-      transition: opacity 0.4s ease-out;
-    }
-
-    #loading img {
-      width: 100px;
-      height: 100px;
-      animation: pulse 1.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.8; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .error-message {
-      color: white;
-      text-align: center;
-      font-family: sans-serif;
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
-  <div id="loading">
-    <img src="assets/splash_vid-ezgif.com-optimize.gif" alt="Loading" fetchpriority="high">
-  </div>
+ 
 
   <script>
     window.addEventListener('load', function() {
       var loading = document.querySelector('#loading');
 
       // Initialize Flutter
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
+      _flutterLoader.loadEntrypoint({
         onEntrypointLoaded: async function(engineInitializer) {
           try {
             let appRunner = await engineInitializer.initializeEngine({
@@ -129,5 +89,10 @@
       });
     });
   </script>
+<script src="canvaskit/canvaskit.js"></script>
+
+  <script src="flutter_bootstrap.js" async></script>
 </body>
+<script src="canvaskit/canvaskit.js"></script>
+
 </html>
