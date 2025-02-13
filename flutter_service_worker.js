@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "5a6c5c750d0abbe50e30598707e7e922",
+const RESOURCES = {"flutter_bootstrap.js": "dfff2692c12c8fafdbdd29b423efb983",
 "version.json": "b51f0ac596ca5cfe839d5478bdf03818",
 "index.html": "96f8d8ece8d2815039b00d4e6e14439f",
 "/": "96f8d8ece8d2815039b00d4e6e14439f",
@@ -42,7 +42,7 @@ const RESOURCES = {"flutter_bootstrap.js": "5a6c5c750d0abbe50e30598707e7e922",
 "assets/assets/splash_screen_logo.png": "282248e59635c10e5e035a0848e9c272",
 "assets/assets/header_logo.png": "0d49e829a5266c38426e014fa79d8925",
 "assets/assets/fest_vertical_white.png": "4e9f4ca0761fe034c5b25778fc76f261",
-"assets/assets/fest_long_white.png": "ab10b453332b3da3188bd47089ca79c6",
+"assets/assets/fest_long_white.png": "2e367cea7b5482587fdb41a97e21edc7",
 "assets/assets/members/naitik.jpg": "e5b7c98a238ce74c11b9407e550069b3",
 "assets/assets/members/SWADHIN.jpg": "d345ad30a6683c7a918233271ae472ec",
 "assets/assets/members/nishant.png": "3245ea13d043f8a30f8d12444b507c5f",
